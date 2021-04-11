@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
-$primary-color: #ffd93c;
+$primary-color: #F93549;
 $success: #2abe80;
 $error: #f5222d;
 $black: #000000;
@@ -9,7 +9,7 @@ $gray-500: #5f5f5f;
 $gray-400: #7e7e7e;
 $gray-300: #cacccf;
 $gray-200: #d9d9d9;
-$gray-100: #fafafa;
+$gray-100: #eaeaea;
 $gray: #f5f5f5;
 $white: #ffffff;
 
@@ -23,7 +23,7 @@ $white: #ffffff;
   --body: 15px;
   --button: 14px;
   --small: 12px;
-  --container-padding: 30px;
+  --padding-page: 20px;
 }
 
 @media (max-width: 1399.98px) {
@@ -37,7 +37,7 @@ $white: #ffffff;
     --body: 15px;
     --button: 14px;
     --small: 12px;
-    --padding-page: 32px;
+    --padding-page: 20px;
   }
 }
 
@@ -52,7 +52,7 @@ $white: #ffffff;
     --body: 15px;
     --button: 14px;
     --small: 12px;
-    --padding-page: 50px;
+    --padding-page: 20px;
   }
 }
 
@@ -82,7 +82,7 @@ $white: #ffffff;
     --body: 15px;
     --button: 14px;
     --small: 12px;
-    --padding-page: 28px;
+    --padding-page: 18px;
   }
 }
 
@@ -97,7 +97,7 @@ $white: #ffffff;
     --body: 15px;
     --button: 14px;
     --small: 12px;
-    --padding-page: 20px;
+    --padding-page: 15px;
   }
 }
 
@@ -105,4 +105,8 @@ $white: #ffffff;
 * {
   font-family: 'Montserrat',
     sans-serif;
+}
+
+em {
+  font-family: "Font Awesome 5 Free";
 }

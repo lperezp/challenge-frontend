@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Registro de Clientes</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="registerClient()" class="form">
+    <label class="form__label">Nombre</label>
+    <input class="input" type="text" formControlName="name" />
+    <label class="form__label">Apellidos</label>
+    <input class="input" type="text" formControlName="lastname" />
+    <label class="form__label">Fecha de Nacimiento</label>
+    <input
+      class="input"
+      type="date"
+      max="2021-04-11"
+      formControlName="dateBirth"
+      (change)="getAge()"
+    />
+    <label class="form__label">Edad</label>
+    <input
+      class="input input__disabled"
+      readonly
+      type="text"
+      formControlName="age"
+    />
+    <div class="form__control">
+      <button class="button button__secondary" type="button">Cancelar</button>
+      <button class="button button__primary" type="submit">Guardar</button>
+    </div>
+  </form>
+</div>
