@@ -1,0 +1,12 @@
+.container {
+  padding: var(--padding-page);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__control {
+    display: flex;
+    justify-content: flex-end;
+    margin: var(--margin-control) 0px;
+  }
+}

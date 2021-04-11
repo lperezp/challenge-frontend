@@ -16,7 +16,7 @@
     }
 
     .form__control {
-      margin: 40px;
+      margin: var(--margin-control);
       display: flex;
       justify-content: center;
 

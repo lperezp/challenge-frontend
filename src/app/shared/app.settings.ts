@@ -2,11 +2,11 @@ export class AppSettings {
   public static MENU = [
     {
       label: 'Registro de Clientes',
-      routerlink: '/client',
+      routerlink: '/client/register-client',
     },
     {
       label: 'Listado de Clientes',
-      routerlink: 'list-client',
+      routerlink: '/client/list-client',
     },
   ];
 }
