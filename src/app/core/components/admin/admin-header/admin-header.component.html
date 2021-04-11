@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="container__navbar">
+    <div class="menu" [ngClass]="{ 'no-visible': !isMenuVisible }">
+      <a
+        *ngFor="let item of menu"
+        [routerLink]="item.routerlink"
+        routerLinkActive="active"
+        >{{ item.label }}</a
+      >
+    </div>
+
+    <div *ngIf="!isMenuVisible" class="burger-button" (click)="openMenu()">
+      <em class="fas fa-bars"></em>
+    </div>
+
+    <div *ngIf="isMenuVisible" class="burger-button" (click)="closeMenu()">
+      <em class="fas fa-times"></em>
+    </div>
+  </div>
+</div>
+<div class="container__user"></div>
