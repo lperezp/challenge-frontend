@@ -16,6 +16,14 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'analysis',
+    component: AdminLayoutComponent,
+    loadChildren: () =>
+      import('./modules/analysis/analysis.module').then(
+        (m) => m.AnalysisModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: 'client',
     pathMatch: 'full',

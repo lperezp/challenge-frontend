@@ -4,4 +4,5 @@ export interface Client {
   lastname: string;
   dateBirth: Date;
   age: number;
+  dateRegister: Date;
 }

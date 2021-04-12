@@ -1,0 +1,15 @@
+.container {
+  padding: var(--padding-page);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__card {
+    display: flex;
+
+    app-card-average {
+      width: 50%;
+      margin: 10px;
+    }
+  }
+}

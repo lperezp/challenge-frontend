@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Análisis de Clientes</h1>
+  <div class="container__card">
+    <app-card-average
+      [title]="titleTotalCustomers"
+      [data]="totalCustomers"
+    ></app-card-average>
+    <app-card-average
+      [title]="titleAverage"
+      [data]="average"
+    ></app-card-average>
+    <app-card-average
+      [title]="titleStandardDeviation"
+      [data]="standardDeviation"
+    ></app-card-average>
+    <app-card-average
+      [title]="titleHourlyCustomers"
+      [data]="hourlyCustomers"
+    ></app-card-average>
+  </div>
+</div>
+
+<app-modal-information [message]="messageModal"></app-modal-information>
