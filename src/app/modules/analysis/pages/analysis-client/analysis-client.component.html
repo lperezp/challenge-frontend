@@ -20,8 +20,16 @@
   </div>
   <div class="container__graphic">
     <div class="graphic">
-      <h5>Cantidad de Clientes por Rango de Edades</h5>
-      <app-range-age [data]="rangeAge"></app-range-age>
+      <app-range-age
+        title="Cantidad de Clientes por Rango de Edades"
+        [data]="listClients"
+      ></app-range-age>
+    </div>
+    <div class="graphic">
+      <app-register-by-hour
+        title="Cantidad de Clientes por Hora del día"
+        [data]="listClients"
+      ></app-register-by-hour>
     </div>
   </div>
 </div>

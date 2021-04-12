@@ -14,8 +14,10 @@
   }
 
   &__graphic {
+    display: flex;
+    flex-direction: row;
+
     .graphic {
-      text-align: center;
       width: 50%;
     }
   }

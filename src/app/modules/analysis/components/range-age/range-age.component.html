@@ -1,12 +1,15 @@
-<div class="chart-wrapper">
-  <canvas
-    baseChart
-    [datasets]="barChartData"
-    [labels]="barChartLabels"
-    [options]="barChartOptions"
-    [plugins]="barChartPlugins"
-    [legend]="barChartLegend"
-    [chartType]="barChartType"
-  >
-  </canvas>
+<div class="container">
+  <h5>{{ title }}</h5>
+  <div class="chart-wrapper">
+    <canvas
+      baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+    >
+    </canvas>
+  </div>
 </div>

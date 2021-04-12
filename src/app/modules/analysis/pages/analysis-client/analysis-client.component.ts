@@ -42,7 +42,6 @@ export class AnalysisClientComponent implements OnInit {
       this.hourlyCustomers = this.utilService.calculateHourlyCustomers(
         this.listClients
       );
-      this.rangeAge = this.utilService.calculateRangeAge(this.listClients);
     } catch (error) {
       this.modalService.isShow = true;
       this.messageModal = AppSettings.TEXT_MESSAGE.MESSAGE_ERROR;

@@ -1,9 +1,8 @@
 import { DatePipe } from '@angular/common';
 import { Injectable } from '@angular/core';
 
-import { zip } from 'rxjs';
-
 import { Client } from 'src/app/core/models/client.model';
+import { AppSettings } from 'src/app/shared/app.settings';
 
 @Injectable({
   providedIn: 'root',
@@ -51,5 +50,28 @@ export class UtilService {
       }
     });
     return rangeArray;
+  }
+
+  calculateAgeByHour(list: Client[]): number[] {
+    const dateCurrent = this.datePipe.transform(new Date(), 'd/M/yy');
+    const filterDay = list.filter(
+      (x) => this.datePipe.transform(x.dateRegister, 'd/M/yy') === dateCurrent
+    );
+    const hour = filterDay.map(
+      (x) => this.datePipe.transform(x.dateRegister, 'H') || ''
+    );
+    const hourAux = hour.map((x) => x.toString().padStart(2, '0'));
+    const AgeByHourArrayAux: any = [];
+    AppSettings.HOURS.forEach((element) => {
+      const data = {
+        hour: element,
+        quantity: hourAux.filter((x) => x === element.slice(0, 2)).length,
+      };
+      AgeByHourArrayAux.push(data);
+    });
+    const AgeByHourArray = AgeByHourArrayAux.map(
+      (x: { quantity: number }) => x.quantity
+    );
+    return AgeByHourArray;
   }
 }
