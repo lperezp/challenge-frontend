@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "/dist/reto-frontend-oechsle",
+    "public": "dist/reto-frontend-oechsle",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
