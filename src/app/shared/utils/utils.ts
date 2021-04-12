@@ -45,7 +45,7 @@ export class UtilService {
         rangeArray[2] = rangeArray[2] + 1;
       } else if (element > 30 && element <= 50) {
         rangeArray[3] = rangeArray[3] + 1;
-      } else if (element <= 50) {
+      } else if (element > 50) {
         rangeArray[4] = rangeArray[4] + 1;
       }
     });
