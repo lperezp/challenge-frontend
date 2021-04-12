@@ -74,4 +74,12 @@ export class UtilService {
     );
     return AgeByHourArray;
   }
+
+  calculateDateDeath(date: Date): Date {
+    const dateDeath = new Date(date);
+    dateDeath.setFullYear(
+      dateDeath.getFullYear() + AppSettings.AGE_AVERAGE_DEATH
+    );
+    return dateDeath;
+  }
 }

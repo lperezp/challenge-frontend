@@ -41,4 +41,7 @@ export class AppSettings {
     '22:00',
     '23:00',
   ];
+
+  // average death value of people
+  public static AGE_AVERAGE_DEATH = 80;
 }

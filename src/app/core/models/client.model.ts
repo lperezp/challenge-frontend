@@ -5,4 +5,5 @@ export interface Client {
   dateBirth: Date;
   age: number;
   dateRegister: Date;
+  dateDeath?: Date;
 }
