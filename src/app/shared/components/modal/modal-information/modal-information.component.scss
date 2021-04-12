@@ -1,0 +1,30 @@
+@import 'variables.scss';
+
+.container {
+  border: 1px solid $gray-200;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: $white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  text-align: center;
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+
+    .button {
+      margin: 0px 20px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    width: 80%;
+    margin-left: -186px;
+  }
+}

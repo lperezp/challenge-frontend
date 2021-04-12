@@ -14,7 +14,7 @@ export class ClientService {
   constructor(private http: HttpClient) {}
 
   getClients(): Observable<Client[]> {
-    return this.http.get<Client[]>(`${environment.URL_BASE}getJuices`);
+    return this.http.get<Client[]>(`${environment.URL_BASE}getClients`);
   }
 
   addClients(payload: Client): Observable<Client> {

@@ -2,6 +2,11 @@ import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
+import { ClientService } from 'src/app/core/services/client.service';
+
+import { ModalService } from './../../../../shared/services/modal.service';
+import { AppSettings } from './../../../../shared/app.settings';
+
 @Component({
   templateUrl: './register-client.component.html',
   styleUrls: ['./register-client.component.scss'],
@@ -16,7 +21,13 @@ export class RegisterClientComponent implements OnInit {
 
   dateCurrent = new Date();
   maxDate = '';
-  constructor(private fb: FormBuilder, private datePipe: DatePipe) {}
+  messageModal = '';
+  constructor(
+    private fb: FormBuilder,
+    private datePipe: DatePipe,
+    private clientService: ClientService,
+    private modalService: ModalService
+  ) {}
 
   ngOnInit(): void {
     this.maxDate =
@@ -32,6 +43,17 @@ export class RegisterClientComponent implements OnInit {
   }
 
   registerClient(): void {
-    console.log(this.registerForm.value);
+    try {
+      this.clientService.addClients(this.registerForm.value).subscribe({
+        next: (data) => {
+          this.modalService.isShow = true;
+          this.messageModal = AppSettings.TEXT_MESSAGE.MESSAGE_SUCCESS;
+          this.registerForm.reset();
+        },
+      });
+    } catch (error) {
+      this.modalService.isShow = true;
+      this.messageModal = AppSettings.TEXT_MESSAGE.MESSAGE_ERROR;
+    }
   }
 }

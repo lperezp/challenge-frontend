@@ -9,4 +9,9 @@ export class AppSettings {
       routerlink: '/client/list-client',
     },
   ];
+
+  public static TEXT_MESSAGE = {
+    MESSAGE_SUCCESS: 'Se registró correctamente.',
+    MESSAGE_ERROR: 'Ocurrió un error. Inténtelo más tarde.',
+  };
 }

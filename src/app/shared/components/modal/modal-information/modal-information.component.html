@@ -1,0 +1,8 @@
+<div class="container" *ngIf="modalService.isShow">
+  <p>{{ message }}</p>
+  <div class="container__controls">
+    <button class="button button__primary" (click)="onSuccess()" type="button">
+      Aceptar
+    </button>
+  </div>
+</div>

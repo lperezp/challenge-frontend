@@ -28,7 +28,15 @@
       >
         Cancelar
       </button>
-      <button class="button button__primary" type="submit">Guardar</button>
+      <button
+        [disabled]="!registerForm.valid"
+        class="button button__primary"
+        type="submit"
+      >
+        Guardar
+      </button>
     </div>
   </form>
 </div>
+
+<app-modal-information [message]="messageModal"></app-modal-information>

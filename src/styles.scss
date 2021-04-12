@@ -47,7 +47,14 @@ body {
   &__primary {
     background: $primary-color;
     color: $white;
+
+    &:disabled {
+      background-color: #ef8c96;
+      cursor: not-allowed;
+    }
   }
+
+
 
   &__secondary {
     background: $gray-200;
