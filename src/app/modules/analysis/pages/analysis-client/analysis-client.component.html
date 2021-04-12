@@ -18,6 +18,12 @@
       [data]="hourlyCustomers"
     ></app-card-average>
   </div>
+  <div class="container__graphic">
+    <div class="graphic">
+      <h5>Cantidad de Clientes por Rango de Edades</h5>
+      <app-range-age [data]="rangeAge"></app-range-age>
+    </div>
+  </div>
 </div>
 
 <app-modal-information [message]="messageModal"></app-modal-information>

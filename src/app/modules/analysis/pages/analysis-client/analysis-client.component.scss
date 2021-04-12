@@ -12,4 +12,11 @@
       margin: 10px;
     }
   }
+
+  &__graphic {
+    .graphic {
+      text-align: center;
+      width: 50%;
+    }
+  }
 }

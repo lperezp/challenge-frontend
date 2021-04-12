@@ -1,5 +1,8 @@
 import { DatePipe } from '@angular/common';
 import { Injectable } from '@angular/core';
+
+import { zip } from 'rxjs';
+
 import { Client } from 'src/app/core/models/client.model';
 
 @Injectable({
@@ -29,5 +32,24 @@ export class UtilService {
       (x) => this.datePipe.transform(x.dateRegister, 'd/M/yy H') === hourCurrent
     );
     return filter.length;
+  }
+
+  calculateRangeAge(list: Client[]): number[] {
+    const listAge = list.map((x) => x.age);
+    const rangeArray = [0, 0, 0, 0, 0];
+    listAge.forEach((element) => {
+      if (element > 0 && element <= 10) {
+        rangeArray[0] = rangeArray[0] + 1;
+      } else if (element > 10 && element <= 18) {
+        rangeArray[1] = rangeArray[1] + 1;
+      } else if (element > 18 && element <= 30) {
+        rangeArray[2] = rangeArray[2] + 1;
+      } else if (element > 30 && element <= 50) {
+        rangeArray[3] = rangeArray[3] + 1;
+      } else if (element <= 50) {
+        rangeArray[4] = rangeArray[4] + 1;
+      }
+    });
+    return rangeArray;
   }
 }

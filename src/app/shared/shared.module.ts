@@ -2,10 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { ModalInformationComponent } from './components/modal/modal-information/modal-information.component';
-import { CardAverageComponent } from './components/card/card-average/card-average.component';
+import { ChartsModule } from 'ng2-charts';
 
-const SHARED_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
+import { CardAverageComponent } from './components/card/card-average/card-average.component';
+import { ModalInformationComponent } from './components/modal/modal-information/modal-information.component';
+
+const SHARED_MODULES = [
+  CommonModule,
+  FormsModule,
+  ReactiveFormsModule,
+  ChartsModule,
+];
 const SHARED_COMPONENTS = [ModalInformationComponent, CardAverageComponent];
 
 @NgModule({
