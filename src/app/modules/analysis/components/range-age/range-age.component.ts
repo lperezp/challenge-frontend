@@ -31,7 +31,7 @@ export class RangeAgeComponent implements OnChanges {
     this.barChartData = [
       {
         data: this.utilService.calculateRangeAge(this.data),
-        label: 'Cantidad de Clientes por Rango de Edades',
+        label: this.title,
       },
     ];
   }
