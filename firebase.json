@@ -1,12 +1,6 @@
 {
   "hosting": {
-    "public": "dist/reto-frontend-oechsle",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+    "public": "/dist/reto-frontend-oechsle",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
